@@ -57,6 +57,19 @@
           "useSingleRequestParameter": true
         }
       },
+      "fury": {
+        "inputSpec": "https://raw.githubusercontent.com/four4two/unchained/develop/go/coinstacks/fury/api/swagger.json",
+        "generatorName": "typescript-fetch",
+        "output": "#{cwd}/src/generated/fury",
+        "enablePostProcessFile": true,
+        "reservedWordsMappings": {
+          "in": "in"
+        },
+        "additionalProperties": {
+          "supportsES6": "true",
+          "useSingleRequestParameter": true
+        }
+      },
       "cosmos": {
         "inputSpec": "https://raw.githubusercontent.com/shapeshift/unchained/develop/go/coinstacks/cosmos/api/swagger.json",
         "generatorName": "typescript-fetch",

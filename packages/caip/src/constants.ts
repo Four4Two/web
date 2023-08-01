@@ -24,6 +24,7 @@ export const osmosisAssetId: AssetId = 'cosmos:osmosis-1/slip44:118'
 export const thorchainAssetId: AssetId = 'cosmos:thorchain-mainnet-v1/slip44:931'
 export const binanceAssetId: AssetId = 'cosmos:binance-chain-tigris/slip44:714'
 export const kavaAssetId: AssetId = 'cosmos:kava_2222-10/slip44:459'
+export const furyAssetId: AssetId = 'cosmos:highbury_710-1/slip44:459'
 export const terraAssetId: AssetId = 'cosmos:phoenix-1/slip44:330'
 export const secretAssetId: AssetId = 'cosmos:secret-4/slip44:529'
 
@@ -44,6 +45,7 @@ export const osmosisChainId: ChainId = 'cosmos:osmosis-1'
 export const thorchainChainId: ChainId = 'cosmos:thorchain-mainnet-v1'
 export const binanceChainId: ChainId = 'cosmos:binance-chain-tigris'
 export const kavaChainId: ChainId = 'cosmos:kava_2222-10'
+export const furyChainId: ChainId = 'cosmos:highbury_710-1'
 export const terraChainId: ChainId = 'cosmos:phoenix-1'
 export const secretChainId: ChainId = 'cosmos:secret-4'
 
@@ -79,6 +81,7 @@ export const CHAIN_REFERENCE = {
   BinanceTestnet: 'binance-chain-ganges', // https://docs.bnbchain.org/docs/wallet_api/#chain-ids
   KavaMainnet: 'kava_2222-10', // https://github.com/Kava-Labs/rosetta-kava/blob/1c04619078a8d3293e296c66eb322c505589f2d6/services/construction_payloads.go#L115
   KavaTestnet: 'kava_2221-16000', // https://github.com/Kava-Labs/rosetta-kava/blob/1c04619078a8d3293e296c66eb322c505589f2d6/services/construction_payloads.go#L117
+  FuryMainnet: 'highbury_710-1', // 
   TerraMainnet: 'phoenix-1', // https://docs.terra.money/full-node/run-a-full-terra-node/join-a-network/
   TerraTestnet: 'pisco-1', // https://docs.terra.money/full-node/run-a-full-terra-node/join-a-network/
   SecretMainnet: 'secret-4', // https://docs.scrt.network/secret-network-documentation/development/api-endpoints
@@ -115,6 +118,7 @@ export const ASSET_REFERENCE = {
   AvalancheC: '60', // evm chain which uses ethereum derivation path as common practice
   Binance: '714',
   Kava: '459',
+  Fury: '459',
   Terra: '330',
   Secret: '529',
   Optimism: '60', // evm chain which uses ethereum derivation path as common practice
@@ -149,6 +153,7 @@ export const VALID_CHAIN_IDS: ValidChainMap = Object.freeze({
     CHAIN_REFERENCE.ThorchainMainnet,
     CHAIN_REFERENCE.BinanceMainnet,
     CHAIN_REFERENCE.KavaMainnet,
+    CHAIN_REFERENCE.FuryMainnet,
     CHAIN_REFERENCE.TerraMainnet,
     CHAIN_REFERENCE.SecretMainnet,
   ],

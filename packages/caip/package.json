@@ -2,6 +2,7 @@
   "name": "@shapeshiftoss/caip",
   "version": "8.15.0",
   "description": "CAIP Implementation",
+  "private": true,
   "repository": "https://github.com/shapeshift/web",
   "license": "MIT",
   "main": "dist/index.js",
@@ -9,9 +10,6 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "build": "yarn clean && yarn run -T tsc --build",
     "clean": "rm -rf dist tsconfig.tsbuildinfo",

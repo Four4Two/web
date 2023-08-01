@@ -19,6 +19,7 @@ describe('assetId', () => {
         ['eip155:1/erc20:0xc770eefad204b5180df6a14ee197d99d808ee52d'],
         ['bip122:000000000019d6689c085ae165831e93/slip44:0'],
         ['bip122:000000000933ea01ad0ee984209779ba/slip44:0'],
+        ['cosmos:highbury_710-1/slip44:459'],
         ['cosmos:cosmoshub-4/slip44:118'],
         ['cosmos:vega-testnet/slip44:118'],
         ['cosmos:osmosis-1/slip44:118'],
@@ -96,6 +97,23 @@ describe('assetId', () => {
       expect(() =>
         toAssetId(omit(assetIdArgSuperset, ['chainNamespace', 'chainReference'])),
       ).toThrow()
+    })
+
+    it('can make Fury AssetId on Fury mainnet', () => {
+      const chainNamespace = CHAIN_NAMESPACE.CosmosSdk
+      const chainReference = CHAIN_REFERENCE.FuryMainnet
+      const assetIdArgSuperset = {
+        chainNamespace,
+        chainReference,
+        assetNamespace: 'slip44' as AssetNamespace,
+        assetReference: ASSET_REFERENCE.Cosmos,
+        chainId: toChainId({ chainNamespace, chainReference }),
+      }
+      const expected = 'cosmos:highbury_710-1/slip44:459'
+      expect(toAssetId(omit(assetIdArgSuperset, 'chainId'))).toEqual(expected)
+      expect(toAssetId(omit(assetIdArgSuperset, ['chainNamespace', 'chainReference']))).toEqual(
+        expected,
+      )
     })
 
     it('can make Cosmos AssetId on CosmosHub mainnet', () => {

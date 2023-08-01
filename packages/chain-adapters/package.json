@@ -3,14 +3,12 @@
   "version": "11.2.2",
   "repository": "https://github.com/shapeshift/web",
   "license": "MIT",
+  "private": true,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "build": "yarn clean && yarn run -T tsc --build",
     "clean": "rm -rf dist tsconfig.tsbuildinfo",

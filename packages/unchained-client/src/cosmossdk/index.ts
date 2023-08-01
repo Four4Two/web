@@ -1,5 +1,6 @@
 export * as types from './types'
 export * from './parser'
 export * as cosmos from './cosmos'
+export * as fury from './fury'
 export * as osmosis from './osmosis'
 export * as thorchain from './thorchain'
